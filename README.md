@@ -1,7 +1,10 @@
 # Data Analysis on Census Data of India
 
+
 I've analysed the census data of India(2011)
+
 The dataset is taken from kaggle
+
 It contains the following columns:
 
 `District_Code`
