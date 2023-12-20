@@ -1,0 +1,22 @@
+DEMOGRAPHIC ANALYSIS
+
+-- Total Population of States
+
+SELECT State_Name, SUM(Population) AS Population
+FROM census_2011
+GROUP BY State_Name;
+
+-- Gender Distribution By State
+
+SELECT State_Name, SUM(Male) AS Males, SUM(Female) AS Females
+FROM census_2011
+GROUP BY State_Name;
+
+-- sex ratio of states
+SELECT
+	State_Name, 
+    SUM(Male) AS Total_Male, 
+    SUM(Female) AS Total_Female, 
+    (SUM(Female) / NULLIF(SUM(Male), 0)) * 1000 AS Females_Per_1000_Males 
+FROM census_2011 
+GROUP BY State_Name;
